@@ -94,6 +94,16 @@ SOCIALACCOUNT_PROVIDERS = {
 ```
 Replace 'your-github-client-id' and 'your-github-client-secret' with your GitHub OAuth application values.
 
+## step 7: Update myproject/urls.py:
+```python
+
+urlpatterns = [
+    # ...
+    path('accounts/', include('allauth.urls')),
+    # ...
+]
+```
+
 ## Step 7: Run Migrations 
 ```bash
 python manage.py migrate
